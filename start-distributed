@@ -83,5 +83,7 @@ PROPERTIES
 
 mkdir .apt/usr/config
 cp .apt/etc/kafka/connect-log4j.properties .apt/usr/config
+wget https://s3.amazonaws.com/redshift-downloads/drivers/RedshiftJDBC42-1.2.1.1001.jar
+cp RedshiftJDBC42-1.2.1.1001.jar .apt/usr/share/java/kafka-connect-jdbc
 
 KAFKA_HEAP_OPTS="-Xms1g -Xmx1g" .apt/usr/bin/connect-distributed dyno-connect-distributed.properties
